@@ -71,11 +71,11 @@
   ```
   每个页面最外层都会有一个page、page-XXX类名
   每个页面结构类似
-  |部分|代码|
+  |部分|类名|
   |---|:--:|
-  |头部|```<header class="header"></header>```|
-  |身体 |```<div class="container"></div>```|
-  |底部 |```<footer class="footer"></footer>```|
+  |头部|`header`|
+  |身体 |`container`|
+  |底部 |`footer`|
 
   ### **组件**
   ```
