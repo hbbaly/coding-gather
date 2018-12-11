@@ -73,9 +73,9 @@
   每个页面结构类似
   |部分|代码|
   |---|:--:|
-  |头部|`<header class="header"></header>`|
-  |身体 |`<div class="container"></div>`|
-  |底部 |`<footer class="footer"></footer>`|
+  |头部|```<header class="header"></header>```|
+  |身体 |```<div class="container"></div>```|
+  |底部 |```<footer class="footer"></footer>```|
 
   ### **组件**
   ```
