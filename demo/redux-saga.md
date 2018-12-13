@@ -1,4 +1,4 @@
-# `redux-saga`
+# `redux-saga`基本认知
 
 ## `install`
 
@@ -46,4 +46,4 @@ function* mySaga() {
 export default mySaga
 ```
 
-具体可以参考：[hbbaly](https://github.com/hbbaly/react-practice/tree/sag 'hbbaly')
+具体可以参考：[hbbaly](https://github.com/hbbaly/react-practice/tree/saga 'hbbaly')
