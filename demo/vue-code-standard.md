@@ -142,3 +142,48 @@
 `view`文件夹下是由以页面为单位的文件夹或模块文件夹组成，放在 `src` 目录下，与`components` 和 `assets` 同级。
 
 **组件命名采用 大驼峰**
+
+### 方法命名规则
+
+**采用动宾短语格式命名，例如：**
+```
+good：
+ jumpPage、openCarInfoDialog
+
+bad：
+ go、nextPage、show、open、login
+```
+
+**数据操作方法以get、post开头，以 data 结尾**
+
+```
+good：
+ getListData、postFormData
+
+bad：
+ takeData、confirmData、getList、postForm
+```
+
+**事件方法以 on 开头，inital,refresh,render除外**
+
+```
+例如，onChange,onUserInput
+```
+
+**尽量使用常用单词开头 （set、get、open、close、jump）命名规则使用驼峰命名**
+
+
+**不在 `created` 和 `mouted` 之类的方法写逻辑，取 `ajax` 数据，**
+
+### data-props
+
+**`data props` 规则**
+
+使用 `data` 里的变量时请先在 `data` 里初始化
+
+`props` **指定类型**
+
+不命名多余数据，
+
+`ajax` 请求数据，统一声明 `isLoading`,`isErro`r 变量记录状态
+
