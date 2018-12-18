@@ -70,4 +70,16 @@
 - ## `git reflog` 
 
     用来记录你的每一次命令
-    ![git log](./images/git/git7.png 'git log')
+    ![git log](./images/git/git7.png 'git reflog')
+
+- ## `git checkout -- `
+    ![git log](./images/git/git8.png 'git reflog')
+
+    在工作区的修改全部撤销  **`只是工作区的修改不包括缓存部分`**
+
+
+- ## `git rm`
+
+    删除某个文件
+
+    
