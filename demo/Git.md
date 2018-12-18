@@ -15,6 +15,9 @@
 
   "AM"状态的意思是，这个文件在我们将它添加到缓存之后又有改动。改动后我们再执行 `git add` 命令将其添加到缓存中。
 
+  **`git add `** 也可以添加多个文件
+  ![gitadd](./images/git/git4.png 'git add')
+
 - ## `git status`
 
   `git status` 以查看在你上次提交之后是否有修改。 -s 参数，以获得简短的结果输出。如果没加该参数会详细输出内容。
@@ -38,3 +41,33 @@
     `git config --global user.email  '1422699902@qq.com'`
   
   `-m `
+
+
+- ## `git mv `
+
+![git mv](./images/git/git3.png 'git mv')
+
+修改某个文件的文件名
+
+- ## `git log` 
+   
+   git log命令显示从最近到最远的提交日志
+
+   ![git log](./images/git/git5.png 'git log')
+
+   `--pretty=oneline ` 参数显示 commit id(版本号)
+
+   ![git log](./images/git/git6.png 'git log')
+- ## `git reset --hard HEAD^`
+   在`Git`中，用`HEAD`表示当前版本 ,上一个版本就是`HEAD^`，上上一个版本就是`HEAD^^`，当然往上100个版本写100个^比较容易数不过来，所以写成 `HEAD~100`。
+
+  **也可以这样**
+
+  `git reset --hard 14f51fe`
+
+  `hard` 后面版本号没必要写全，前几位就可以了， `Git` 会自动去找。
+
+- ## `git reflog` 
+
+    用来记录你的每一次命令
+    ![git log](./images/git/git7.png 'git log')
