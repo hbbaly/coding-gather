@@ -70,6 +70,7 @@
 - ## `git reflog` 
 
     用来记录你的每一次命令
+
     ![git log](./images/git/git7.png 'git reflog')
 
 - ## `git checkout -- `
@@ -82,4 +83,16 @@
 
     删除某个文件
 
-    
+- ## `git branch`
+    查看分支
+
+- ## `git branch <name>`
+    新建分支
+
+- ## `git checkout <name>`
+
+    切换分支
+
+- ## `git checkout -b <name>`
+
+    切换并创建分支
