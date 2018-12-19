@@ -175,6 +175,7 @@
 
 # git tag
 
+使用`git` 创建一个`tag` ,一个不可修改的历史代码版本。
   ## `git tag tagname `
 
   在当前分支打标签，  `git tag v1.0`  为当前分支打上v1.0的标签,只是在存储在本地。
@@ -204,4 +205,22 @@
   `git tag -d <tagname>`
 
   因为创建的标签，都是本地存储，没有提交到远程，可以删除。
+
+- ## 推送某个标签到远程
+
+
+  **`git push origin <tagname>`**
+
+  一次全部推送尚未推送到远程的本地标签
+
+  **`git push origin --tags`**
+- ## 删除远程标签
+
+  如果标签已经推送到远程，要删除远程标签就麻烦一点，先从本地删除：
+
+  **`git tag -d <tagname>`**
+
+  从远程删除。删除命令也是push
+
+  **`git push origin :refs/tags/<tagname>`**
 
