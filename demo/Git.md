@@ -53,11 +53,11 @@
    
    git log命令显示从最近到最远的提交日志
 
-   ![git log](./images/git/git5.png 'git log')
+![git log](./images/git/git5.png 'git log')
 
    `--pretty=oneline ` 参数显示 commit id(版本号)
 
-   ![git log](./images/git/git6.png 'git log')
+![git log](./images/git/git6.png 'git log')
 - ## `git reset --hard HEAD^`
    在`Git`中，用`HEAD`表示当前版本 ,上一个版本就是`HEAD^`，上上一个版本就是`HEAD^^`，当然往上100个版本写100个^比较容易数不过来，所以写成 `HEAD~100`。
 
@@ -71,10 +71,10 @@
 
     用来记录你的每一次命令
 
-    ![git log](./images/git/git7.png 'git reflog')
+![git log](./images/git/git7.png 'git reflog')
 
 - ## `git checkout -- `
-    ![git log](./images/git/git8.png 'git reflog')
+![git log](./images/git/git8.png 'git reflog')
 
     在工作区的修改全部撤销  **`只是工作区的修改不包括缓存部分`**
 
@@ -113,7 +113,7 @@
 - ## 分支管理策略
  
 
-    ![git log](./images/git/git10.png 'git reflog')
+![git log](./images/git/git10.png 'git reflog')
 
     上图可以看出操作，我们首先使用`git checkout develop`切换`develop`分支,修改文件，提交。在切回`master`分支，合并`develop`代码。
 
@@ -130,7 +130,16 @@
 - **bug分支**
 
 
-   如果工作中我们正在开发某个功能，突然接到一个紧急bug，需要现在修复，而我们手里功能写道一半，还没有提交到**缓存区**。
+   如果工作中我们正在开发某个功能，突然接到一个紧急bug，需要现在修复，而我们手里功能写道一半，还没有提交到（`git commit`）**缓存区**。
    **git stash**可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作。
 
-   ![git stash](./images/git/git11.png 'git reflog')
+![git stash](./images/git/git11.png 'git reflog')
+
+   - 首先`git stash `把当前工作区中修改的内容保存，`git status`查看当前工作区，没有修改文件。
+   - 创建并切换**bug-101**分支，修改并提交。
+   - 切换回`master`分支，合并**bug-101** 分支
+   - `git stash list`查看之前存储的内容,使用 `git stash apply`(但是恢复后，stash内容并不删除,也可以使用`git stash drop` 回复内容的同时，会删除)
+
+- ## 丢弃没有被合并过的分支
+
+    `git branch -D <name>`强制删除
