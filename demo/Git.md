@@ -96,3 +96,31 @@
 - ## `git checkout -b <name>`
 
     切换并创建分支
+
+- ## `git merge <name>`
+
+    合并某分支到当前分支
+
+- ## `git branch -d <name>`
+
+    删除分支
+
+操作记录如下图：
+
+![git log](./images/git/git9.png 'git reflog')
+
+
+- ## 分支管理策略
+ 
+
+    ![git log](./images/git/git10.png 'git reflog')
+
+    上图可以看出操作，我们首先使用`git checkout develop`切换`develop`分支,修改文件，提交。在切回`master`分支，合并`develop`代码。
+
+    ```
+      git merge --no-ff -m "merge with no-ff" develop
+    ```
+
+    `--no-ff` 参数，表示禁用`Fast forward`模式，`Git`就会在`merge`时生成一个新的`commit`，这样，从分支历史上就可以看出分支信息。
+
+    `-m` 表示把`commit`描述写进去。
