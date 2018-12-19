@@ -124,3 +124,5 @@
     `--no-ff` 参数，表示禁用`Fast forward`模式，`Git`就会在`merge`时生成一个新的`commit`，这样，从分支历史上就可以看出分支信息。
 
     `-m` 表示把`commit`描述写进去。
+
+    `git log --graph --pretty=oneline --abbrev-commit`查看分支记录。
