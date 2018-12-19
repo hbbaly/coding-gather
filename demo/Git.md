@@ -126,3 +126,11 @@
     `-m` 表示把`commit`描述写进去。
 
     `git log --graph --pretty=oneline --abbrev-commit`查看分支记录。
+
+- **bug分支**
+
+
+   如果工作中我们正在开发某个功能，突然接到一个紧急bug，需要现在修复，而我们手里功能写道一半，还没有提交到**缓存区**。
+   **git stash**可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作。
+
+   ![git stash](./images/git/git11.png 'git reflog')
