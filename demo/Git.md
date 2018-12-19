@@ -143,3 +143,31 @@
 - ## 丢弃没有被合并过的分支
 
     `git branch -D <name>`强制删除
+
+
+# git push
+
+
+- ## git remote
+
+  当你从远程仓库克隆时，实际上Git自动把本地的master分支和远程的master分支对应起来了，并且，远程仓库的默认名称是**origin**。
+
+  `git remote -v`
+
+  查看详细远程库信息
+
+- ## 推送分支
+
+  `git push origin <当前推送分支>`  
+
+- ## 本地分支与远程分支关联
+
+  **`git checkout -b <name> origin/<name>`**
+
+   在本地创建与远程分支对应的分支。
+
+  **`git branch --set-upstream-to=origin/dev dev`**
+
+  把本地dev分支与远程dev分支关联。
+
+  **`git branch --set-upstream-to=origin/<远程分支> <本地分支>`**
