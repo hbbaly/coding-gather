@@ -171,3 +171,37 @@
   把本地dev分支与远程dev分支关联。
 
   **`git branch --set-upstream-to=origin/<远程分支> <本地分支>`**
+
+
+# git tag
+
+  ## `git tag tagname `
+
+  在当前分支打标签，  `git tag v1.0`  为当前分支打上v1.0的标签,只是在存储在本地。
+
+  ## ` git tag`  
+
+  查看当前分支所打标签，标签不是按时间顺序列出，而是按字母排序的
+
+默认标签是打在最新提交的commit上的。有时候之前commit如果忘了打标签
+
+可以找到历史提交的commit id，然后打上就可以了
+
+`git tag v1.1 4fde738`  中找到commit id 为4fde738 为其打上v1.1标签。
+
+## `git show <tagname> `
+
+ 查看标签信息
+
+
+## `git tag -a <tagname> -m "<desc>" commit id`
+
+
+   -a 表示打的标签名，-m 说明文字
+
+## 删除标签
+
+  `git tag -d <tagname>`
+
+  因为创建的标签，都是本地存储，没有提交到远程，可以删除。
+
