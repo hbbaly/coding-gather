@@ -1,6 +1,6 @@
-# 代码规范
+# 代码搜集
 
-## 主要是整理一些代码规范以及markdown用法
+## demo 主要是整理一些代码规范以及markdown用法
 
 ### 项目
 1. **markdowen**
@@ -16,3 +16,5 @@
     查看`demo`目录 `redux-saga.md`文件,介绍了一些总结`redux-saga`基本用法
 5. **redux-combineReducers**
     查看`demo`目录 `redux-combineReducers.md`文件,介绍了一些总结`redux-combineReducers`基本用法
+
+## **regular** 正则表达式例子搜集
