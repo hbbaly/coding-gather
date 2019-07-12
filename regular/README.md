@@ -159,3 +159,39 @@ let imgReg = /<img.*?(?:>|\/>)/gi,
     // '所有地址也能匹配.jpg',
     // '/uploads/attached/image/20120426/20120426225658_92565.png' ]
 ```
+
+## 标签替换
+
+```js
+// 匹配style标签
+let styleReg = /<style(.*?)<\/style>/gi,
+str = 'this is test string <style>hbbaly</style>this is test string <style>hbbaly</style>this is test string <style>hbbaly</style>',
+result;
+// result = str.match(styleReg)
+result = str.replace(styleReg, '<div$1</div>')
+
+console.log(result)  // this is test string <div>hbbaly</div>this is test string <div>hbbaly</div>this is test string <div>hbbaly</div>
+```
+
+## 处理电话号码
+
+```js
+// 13297006700 替换成132****6700
+let teleReg = /1(\d{2})\d{4}(\d{4})/g,
+    str = '13297006700',
+    result;
+result = str.replace(teleReg, '1$1****$2')
+console.log(result) // 132****6700
+```
+
+## 验证身份号码
+
+```js
+// 验证身份号码
+
+let reg = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/,
+    str = '14412345678901234x',
+    result;
+    result = reg.test(str)
+    console.log(result)
+```
